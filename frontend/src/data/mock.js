@@ -47,7 +47,7 @@ export const categories = [
     description: 'Menemukan dan mengeksploitasi celah keamanan pada aplikasi web dan layanan online.',
     color: '#10b981',
     history: 'Eksploitasi web mulai muncul bersamaan dengan perkembangan World Wide Web di tahun 1990-an. Serangan awal mencakup SQL injection sederhana dan cross-site scripting (XSS). Seiring aplikasi web menjadi lebih kompleks, vektor serangan berkembang mencakup authentication bypass, CSRF, XXE, dan kelemahan logika bisnis yang canggih. Hari ini, hampir semua layanan online rentan terhadap serangan web jika tidak diamankan dengan baik.',
-    explanation: 'Eksploitasi web adalah seni menemukan celah keamanan pada website atau aplikasi web. Bayangkan kamu mencari pintu belakang yang tidak terkunci pada sebuah bangunan digital!\\n\\nYang akan kamu pelajari:\\n\u2022 SQL Injection: Memasukkan perintah database lewat form input\\n\u2022 Cross-Site Scripting (XSS): Menyisipkan kode JavaScript berbahaya\\n\u2022 CSRF: Membuat pengguna melakukan aksi tanpa disadari\\n\u2022 Authentication Bypass: Melewati sistem login\\n\u2022 File Upload Vulnerabilities: Mengupload file berbahaya\\n\u2022 Path Traversal: Mengakses file yang seharusnya tidak bisa diakses\\n\u2022 API Security: Keamanan pada REST API\\n\\nContoh sederhana: Pada form login yang tidak aman, input \\' OR \\'1\\'=\\'1 bisa bypass password! Kamu akan belajar bagaimana hacker berpikir dan bagaimana melindungi aplikasi.\\n\\nSkill ini sangat berguna untuk menjadi web developer atau security analyst!',
+    explanation: 'Eksploitasi web adalah seni menemukan celah keamanan pada website atau aplikasi web. Bayangkan kamu mencari pintu belakang yang tidak terkunci pada sebuah bangunan digital!\n\nYang akan kamu pelajari:\n• SQL Injection: Memasukkan perintah database lewat form input\n• Cross-Site Scripting (XSS): Menyisipkan kode JavaScript berbahaya\n• CSRF: Membuat pengguna melakukan aksi tanpa disadari\n• Authentication Bypass: Melewati sistem login\n• File Upload Vulnerabilities: Mengupload file berbahaya\n• Path Traversal: Mengakses file yang seharusnya tidak bisa diakses\n• API Security: Keamanan pada REST API\n\nContoh sederhana: Pada form login yang tidak aman, input \' OR \'1\'=\'1 bisa bypass password! Kamu akan belajar bagaimana hacker berpikir dan bagaimana melindungi aplikasi.\n\nSkill ini sangat berguna untuk menjadi web developer atau security analyst!',
     caseStudies: [
       {
         title: 'Peretasan Sony Pictures (2014)',
@@ -61,41 +61,41 @@ export const categories = [
   },
   {
     id: 'pwn',
-    name: 'PWN',
+    name: 'Binary Exploitation (PWN)',
     slug: 'pwn',
     icon: 'zap',
-    description: 'Binary exploitation and gaining control of systems through memory corruption.',
+    description: 'Eksploitasi memori dan binary untuk mengambil kontrol sistem komputer.',
     color: '#ef4444',
-    history: 'PWN challenges originated from real-world buffer overflow exploits discovered in the 1980s. The Morris Worm (1988) exploited a buffer overflow. Modern PWN includes return-oriented programming (ROP), heap exploitation, and bypassing modern protections like ASLR and DEP.',
-    explanation: 'PWN involves exploiting memory corruption vulnerabilities in binary programs. Techniques include buffer overflows, format string attacks, use-after-free, and return-oriented programming. Understanding assembly language, memory layout, and operating system internals is crucial.',
+    history: 'PWN challenges berasal dari eksploitasi buffer overflow yang ditemukan pada tahun 1980-an. Morris Worm (1988) adalah salah satu malware pertama yang mengeksploitasi buffer overflow. PWN modern mencakup return-oriented programming (ROP), heap exploitation, dan bypass proteksi seperti ASLR dan DEP. Ini adalah salah satu bidang paling teknis dalam keamanan siber.',
+    explanation: 'Binary exploitation (atau PWN) adalah teknik mengeksploitasi bug pada program yang sudah dikompilasi untuk mengambil kontrol sistem. Ini adalah level mahir dalam keamanan siber!\n\nApa itu buffer overflow? Bayangkan kamu punya gelas yang hanya bisa menampung 250ml air, tapi kamu tuangkan 500ml. Air akan tumpah kemana-mana, kan? Nah, di komputer, "tumpahan" ini bisa dimanfaatkan untuk menjalankan kode berbahaya!\n\nYang akan kamu pelajari:\n• Buffer Overflow: Mengisi memori lebih dari kapasitasnya\n• Stack dan Heap exploitation\n• Format String Attacks\n• Return Oriented Programming (ROP)\n• Shellcode injection\n• Bypass proteksi: ASLR, DEP, Stack Canaries\n• Membaca assembly code (x86, x64, ARM)\n\nIni memang challenging, tapi sangat memuaskan ketika berhasil! Tools yang dipakai: GDB, pwntools, IDA Pro, Binary Ninja.\n\nCatatan: Level ini cocok untuk yang sudah memahami programming dan ingin mendalami low-level security.',
     caseStudies: [
       {
-        title: 'Morris Worm',
-        description: 'First major computer worm exploited buffer overflow in Unix fingerd service in 1988.'
+        title: 'Morris Worm (1988)',
+        description: 'Worm komputer pertama yang menyebar luas melalui internet, dibuat oleh Robert Morris. Worm ini mengeksploitasi buffer overflow pada service fingerd di Unix. Dampaknya sangat besar - sekitar 10% komputer yang terhubung ke internet saat itu terinfeksi. Morris dihukum dan ini menjadi kasus cybercrime pertama yang diadili.'
       },
       {
-        title: 'Heartbleed Bug',
-        description: 'Buffer over-read in OpenSSL allowed attackers to read sensitive memory contents.'
+        title: 'Heartbleed Bug (2014)',
+        description: 'Bug pada library OpenSSL yang memungkinkan penyerang membaca memori server. Jutaan website terdampak, termasuk Yahoo, Amazon, dan banyak layanan populer. Bug ini memungkinkan pencurian password, kunci enkripsi, dan data sensitif lainnya. Ini adalah salah satu bug paling serius dalam sejarah internet!'
       }
     ]
   },
   {
     id: 'osint',
-    name: 'OSINT',
+    name: 'OSINT (Open Source Intelligence)',
     slug: 'osint',
     icon: 'eye',
-    description: 'Open Source Intelligence - gathering information from publicly available sources.',
+    description: 'Mengumpulkan informasi dari sumber publik untuk investigasi dan analisis.',
     color: '#f59e0b',
-    history: 'OSINT has roots in traditional intelligence gathering but exploded with the internet age. Social media, public databases, and online services created unprecedented opportunities for information gathering. Today, OSINT is used by security researchers, law enforcement, and journalists.',
-    explanation: 'OSINT involves collecting and analyzing publicly available information from the internet, social media, public records, and other sources. Techniques include Google dorking, social media analysis, metadata extraction, geolocation, and connecting disparate information points.',
+    history: 'OSINT memiliki akar dalam intelijen tradisional, tetapi meledak perkembangannya di era internet. Media sosial, database publik, dan layanan online menciptakan peluang yang belum pernah ada sebelumnya untuk pengumpulan informasi. Hari ini, OSINT digunakan oleh peneliti keamanan, penegak hukum, jurnalis investigasi, dan bahkan oleh masyarakat umum untuk mengungkap kebenaran.',
+    explanation: 'OSINT adalah seni mengumpulkan dan menganalisis informasi yang tersedia untuk umum. Kamu akan menjadi "internet detective" yang mencari petunjuk dari berbagai sumber online!\n\nYang menarik dari OSINT: Semua informasi yang kamu butuhkan sudah ada di internet, kamu hanya perlu tahu cara menemukannya!\n\nYang akan kamu pelajari:\n• Google Dorking: Teknik pencarian Google tingkat lanjut\n• Social Media Intelligence: Menganalisis profil dan aktivitas sosmed\n• Geolocation: Menemukan lokasi dari foto atau video\n• Metadata Analysis: Membaca info tersembunyi dalam file\n• Username Enumeration: Melacak username di berbagai platform\n• Reverse Image Search: Mencari asal-usul gambar\n• WHOIS Lookup: Mencari info pemilik domain\n• Archive.org: Melihat website versi lama\n\nContoh kasus: Dari sebuah foto selfie, kamu bisa mengetahui lokasi, waktu pengambilan, bahkan device yang digunakan!\n\nOSINT sangat berguna untuk jurnalisme investigasi, security research, dan bahkan untuk melindungi privasi diri sendiri.',
     caseStudies: [
       {
-        title: 'Bellingcat Investigations',
-        description: 'Used OSINT to identify Russian military involvement in Ukraine and Syrian conflict.'
+        title: 'Investigasi Bellingcat',
+        description: 'Bellingcat adalah kelompok jurnalis investigasi yang menggunakan OSINT untuk mengungkap kebenaran. Mereka berhasil mengidentifikasi pelaku penembakan pesawat MH17 di Ukraina, mengungkap penggunaan senjata kimia di Suriah, dan banyak kasus lainnya. Semua menggunakan informasi publik dari internet! Karya mereka membuktikan kekuatan OSINT dalam mencari keadilan.'
       },
       {
-        title: 'January 6 Capitol Investigation',
-        description: 'OSINT helped identify participants through social media posts and geolocation data.'
+        title: 'Investigasi Kerusuhan Capitol 6 Januari 2021',
+        description: 'Setelah penyerbuan gedung Capitol AS, ribuan orang menggunakan OSINT untuk mengidentifikasi pelaku. Dari foto dan video yang dibagikan di media sosial, mereka berhasil melacak identitas ratusan pelaku. Data geolocation, metadata foto, dan cross-referencing profil sosmed membantu FBI menangkap ratusan tersangka. Ini contoh OSINT massal oleh masyarakat!'
       }
     ]
   },
@@ -104,18 +104,18 @@ export const categories = [
     name: 'Reverse Engineering',
     slug: 'reverse-engineering',
     icon: 'cpu',
-    description: 'Analyzing software to understand its functionality and find vulnerabilities.',
+    description: 'Menganalisis software untuk memahami cara kerjanya dan menemukan celah keamanan.',
     color: '#ec4899',
-    history: 'Reverse engineering began with analyzing competitor products. In cybersecurity, it became crucial for malware analysis and vulnerability research. Tools like IDA Pro and Ghidra revolutionized the field. Modern reverse engineering includes mobile apps, IoT devices, and cloud services.',
-    explanation: 'Reverse engineering involves disassembling and analyzing compiled programs to understand their behavior. This includes static analysis (reading disassembled code) and dynamic analysis (observing runtime behavior). Skills needed include reading assembly, understanding compilers, and using debugging tools.',
+    history: 'Reverse engineering dimulai dari analisis produk kompetitor. Dalam keamanan siber, reverse engineering menjadi krusial untuk analisis malware dan riset kerentanan. Tools seperti IDA Pro dan Ghidra merevolusi bidang ini. Reverse engineering modern mencakup aplikasi mobile, perangkat IoT, dan layanan cloud. Ini adalah skill fundamental untuk malware analyst dan security researcher.',
+    explanation: 'Reverse engineering adalah proses membongkar software untuk memahami cara kerjanya tanpa melihat source code-nya. Bayangkan kamu membongkar jam tangan untuk mengerti bagaimana jarum jam bisa bergerak!\n\nKenapa penting?\n• Menganalisis malware untuk mengerti cara kerjanya\n• Menemukan bug dan kerentanan keamanan\n• Memahami algoritma proprietary\n• Cracking software (untuk edukasi!)\n• Modifikasi game atau aplikasi\n\nYang akan kamu pelajari:\n• Membaca Assembly Code: Bahasa mesin yang dimengerti komputer\n• Static Analysis: Menganalisis program tanpa menjalankannya\n• Dynamic Analysis: Menganalisis saat program berjalan\n• Debugging: Melacak eksekusi program step-by-step\n• Decompilation: Mengubah machine code kembali ke kode tingkat tinggi\n• Obfuscation: Teknik menyembunyikan kode\n• Anti-debugging techniques\n\nTools populer: Ghidra (gratis!), IDA Pro, x64dbg, Radare2, Binary Ninja\n\nReverse engineering butuh kesabaran dan ketelitian, tapi sangat powerful! Ini adalah skill yang dicari di industri security.',
     caseStudies: [
       {
-        title: 'Stuxnet Analysis',
-        description: 'Security researchers reverse engineered Stuxnet to reveal sophisticated state-sponsored malware.'
+        title: 'Analisis Stuxnet (2010)',
+        description: 'Stuxnet adalah malware paling canggih yang pernah ditemukan - senjata siber yang dibuat negara untuk menyabotase program nuklir Iran. Para researcher menghabiskan berbulan-bulan melakukan reverse engineering untuk memahami kompleksitasnya. Mereka menemukan 4 zero-day exploits, rootkit kernel, dan kode yang didesain khusus untuk merusak centrifuge nuklir. Analisis ini mengungkap era baru dalam cyber warfare!'
       },
       {
-        title: 'PlayStation 3 Jailbreak',
-        description: 'Reverse engineering revealed cryptographic implementation flaws enabling custom firmware.'
+        title: 'Jailbreak PlayStation 3 (2010)',
+        description: 'George Hotz (geohot) melakukan reverse engineering pada PlayStation 3 dan menemukan kelemahan kritis dalam implementasi kriptografi Sony. Ternyata Sony menggunakan random number yang sama untuk semua signature - kesalahan fatal! Ini memungkinkan custom firmware dan homebrew. Sony menggugat Hotz, tapi kasus ini mengajarkan pentingnya implementasi kriptografi yang benar.'
       }
     ]
   }
@@ -125,204 +125,204 @@ export const challenges = [
   {
     id: 'crypto-1',
     category: 'cryptography',
-    title: 'Caesar Cipher',
-    difficulty: 'Easy',
+    title: 'Caesar Cipher - Pesan Rahasia',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'Decrypt this classic cipher: "Khoor Zruog! Wklv lv d CWI fkdoohqjh."',
-    hint: 'Try shifting each letter by a fixed number. The shift value is less than 13.',
-    solution: 'The shift is 3. Decrypted message: "Hello World! This is a CTF challenge."',
+    description: 'Dekripsi cipher klasik ini: "Khoor Zruog! Wklv lv d CWI fkdoohqjh."\n\nPetunjuk: Setiap huruf digeser dengan jumlah yang sama. Julius Caesar menggunakan teknik ini untuk mengirim pesan rahasia!',
+    hint: 'Coba geser setiap huruf mundur beberapa posisi. Nilai pergeseran kurang dari 13. Kamu bisa coba satu per satu dari 1 sampai 12, atau langsung tebak angka keberuntunganmu!',
+    solution: 'Pergeserannya adalah 3 posisi. Jika kita geser mundur 3 posisi (K→H, h→e, dst), kita dapatkan pesan: "Hello World! This is a CTF challenge."\n\nIni adalah Caesar cipher dengan shift 3, sama seperti yang digunakan Julius Caesar 2000 tahun lalu!',
     answer: 'hello world! this is a ctf challenge.'
   },
   {
     id: 'crypto-2',
     category: 'cryptography',
-    title: 'Base64 Decode',
-    difficulty: 'Easy',
+    title: 'Base64 Decoder',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'Decode this Base64 string: "Q1RGe2Jhc2U2NF9pc19lYXN5fQ=="',
-    hint: 'Base64 is a common encoding scheme. Use any Base64 decoder.',
-    solution: 'Decoded: "CTF{base64_is_easy}"',
+    description: 'Decode string Base64 ini: "Q1RGe2Jhc2U2NF9pc19lYXN5fQ=="\n\nBase64 adalah cara umum untuk meng-encode data binary menjadi text. Banyak digunakan di web!',
+    hint: 'Base64 adalah encoding, bukan encryption. Gunakan online Base64 decoder atau command line: echo "string" | base64 -d\n\nTanda "==" di akhir adalah padding khas Base64.',
+    solution: 'Hasil decode: "CTF{base64_is_easy}"\n\nBase64 digunakan untuk encoding data, bukan untuk keamanan. Ini berguna saat kita perlu mengirim binary data dalam format text.',
     answer: 'CTF{base64_is_easy}'
   },
   {
     id: 'crypto-3',
     category: 'cryptography',
-    title: 'ROT13',
-    difficulty: 'Easy',
+    title: 'ROT13 - Rotasi Ajaib',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'Decrypt: "PGS{ebg13_vf_fvzcyr}"',
-    hint: 'ROT13 is a special case of Caesar cipher with a shift of 13.',
-    solution: 'Apply ROT13 to get: "CTF{rot13_is_simple}"',
+    description: 'Dekripsi pesan ini: "PGS{ebg13_vf_fvzcyr}"\n\nROT13 adalah cipher substitusi yang sangat populer di internet. Disebut "ROT13" karena alasan tertentu!',
+    hint: 'ROT13 adalah variasi khusus dari Caesar cipher dengan pergeseran 13. Yang menarik: kalau kamu ROT13 dua kali, kamu dapat kembali ke teks awal! (26 huruf / 2 = 13)',
+    solution: 'Terapkan ROT13 (geser 13 posisi) untuk mendapatkan: "CTF{rot13_is_simple}"\n\nFun fact: ROT13 sering digunakan di forum internet untuk menyembunyikan spoiler atau jawaban puzzle!',
     answer: 'CTF{rot13_is_simple}'
   },
   {
     id: 'forensic-1',
     category: 'forensic',
-    title: 'Hidden Message',
-    difficulty: 'Medium',
+    title: 'Pesan Tersembunyi',
+    difficulty: 'Sedang',
     points: 200,
-    description: 'A text file contains: "The flag is not here... or is it?\u0000\u0000CTF{hidden_in_nulls}"',
-    hint: 'Look for null bytes or hidden characters in the file.',
-    solution: 'The flag is hidden after null bytes: "CTF{hidden_in_nulls}"',
+    description: 'Sebuah file text berisi: "The flag is not here... or is it?\u0000\u0000CTF{hidden_in_nulls}"\n\nAda yang aneh dengan file ini. Sepertinya ada data tersembunyi di tempat yang tidak terduga!',
+    hint: 'Lihat dengan teliti! Ada karakter null bytes (byte bernilai 0) yang tidak terlihat di text editor biasa. Coba buka dengan hex editor atau gunakan command: cat -A filename atau xxd filename',
+    solution: 'Flag tersembunyi setelah null bytes: "CTF{hidden_in_nulls}"\n\nNull bytes (\u0000) tidak terlihat di text editor tapi tetap ada di file. Ini teknik umum untuk menyembunyikan data!',
     answer: 'CTF{hidden_in_nulls}'
   },
   {
     id: 'forensic-2',
     category: 'forensic',
-    title: 'File Signature',
-    difficulty: 'Easy',
+    title: 'Tanda Tangan File',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'A file has the hex signature: "89 50 4E 47 0D 0A 1A 0A". What file type is this?',
-    hint: 'Look up file signatures (magic numbers) in a file signature database.',
-    solution: 'This is a PNG image file signature.',
+    description: 'Sebuah file memiliki hex signature: "89 50 4E 47 0D 0A 1A 0A"\n\nJenis file apa ini? File signature (magic bytes) ada di awal setiap file dan menunjukkan tipe file-nya.',
+    hint: 'Cari di database file signature! Setiap tipe file punya signature unik di byte pertamanya. Contoh: PDF dimulai dengan "25 50 44 46" (%PDF), ZIP dengan "50 4B".',
+    solution: 'Ini adalah file PNG (Portable Network Graphics) - format gambar!\n\nFile signature PNG: 89 50 4E 47 0D 0A 1A 0A\n\nIni berguna untuk mengidentifikasi file yang ekstensinya salah atau disembunyikan.',
     answer: 'png'
   },
   {
     id: 'web-1',
     category: 'web-exploitation',
-    title: 'HTML Comment',
-    difficulty: 'Easy',
+    title: 'Komentar HTML',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'A website has an HTML comment that says: "<!-- TODO: Remove flag CTF{inspect_the_source} -->"',
-    hint: 'View the page source code.',
-    solution: 'The flag is in an HTML comment: "CTF{inspect_the_source}"',
+    description: 'Sebuah website memiliki komentar HTML: "<!-- TODO: Hapus flag CTF{inspect_the_source} -->"\n\nDeveloper sering lupa menghapus komentar yang berisi info sensitif!',
+    hint: 'Lihat source code halaman web! Klik kanan > View Page Source, atau tekan Ctrl+U (Windows) / Cmd+Option+U (Mac).\n\nKomentar HTML tidak terlihat di halaman tapi ada di kode!',
+    solution: 'Flag ada di komentar HTML: "CTF{inspect_the_source}"\n\nSelalu periksa source code website! Developer sering meninggalkan informasi menarik di komentar, termasuk API keys, password, atau struktur backend.',
     answer: 'CTF{inspect_the_source}'
   },
   {
     id: 'web-2',
     category: 'web-exploitation',
-    title: 'Cookies',
-    difficulty: 'Medium',
+    title: 'Manipulasi Cookie',
+    difficulty: 'Sedang',
     points: 200,
-    description: 'A website sets a cookie: "admin=false". Change it to "admin=true" to get the flag.',
-    hint: 'Use browser developer tools to modify cookies.',
-    solution: 'Modify the admin cookie to true. Flag: "CTF{cookie_manipulation}"',
+    description: 'Website ini set cookie: "admin=false". Ubah menjadi "admin=true" untuk mendapat flag!\n\nCookie adalah data yang disimpan browser. Kadang developer menyimpan info sensitif di sini - big mistake!',
+    hint: 'Gunakan Developer Tools browser (F12). Pergi ke tab Application/Storage > Cookies. Kamu bisa edit nilai cookie langsung!\n\nAtau pakai extension seperti EditThisCookie.',
+    solution: 'Ubah cookie admin menjadi true. Flag: "CTF{cookie_manipulation}"\n\nPelajaran penting: JANGAN simpan data penting atau status authorization di client side! Harus di-validate di server.',
     answer: 'CTF{cookie_manipulation}'
   },
   {
     id: 'osint-1',
     category: 'osint',
-    title: 'Username Hunt',
-    difficulty: 'Easy',
+    title: 'Pelacakan Username',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'Find where user "cyber_explorer_2024" has accounts. The flag format is the number of platforms found.',
-    hint: 'Use tools like Sherlock or manually search common platforms.',
-    solution: 'This is a simulated challenge. Answer: "CTF{osint_is_powerful}"',
+    description: 'Temukan dimana user "cyber_explorer_2024" punya akun. Format flag adalah jumlah platform yang ditemukan.\n\nUsername yang sama sering dipakai di banyak platform - jejak digital!',
+    hint: 'Gunakan tools seperti Sherlock (namecheckup.com), atau cari manual di platform populer: Twitter, Instagram, GitHub, Reddit, LinkedIn, TikTok, YouTube, dll.\n\nCoba search di Google: "cyber_explorer_2024"',
+    solution: 'Ini adalah simulasi challenge. Dalam kasus real, kamu akan menemukan username ini di berbagai platform. Answer: "CTF{osint_is_powerful}"\n\nOSINT mengajarkan betapa banyak jejak digital kita di internet!',
     answer: 'CTF{osint_is_powerful}'
   },
   {
     id: 'osint-2',
     category: 'osint',
-    title: 'Metadata Analysis',
-    difficulty: 'Medium',
+    title: 'Analisis Metadata Foto',
+    difficulty: 'Sedang',
     points: 200,
-    description: 'An image\'s EXIF data shows GPS coordinates: 40.7128° N, 74.0060° W. What city?',
-    hint: 'Use Google Maps or a coordinates lookup tool.',
-    solution: 'These coordinates point to New York City.',
+    description: 'Data EXIF foto menunjukkan koordinat GPS: 40.7128° N, 74.0060° W\n\nSetiap foto dari smartphone biasanya menyimpan lokasi! Kota apa ini?',
+    hint: 'Paste koordinat ke Google Maps atau gunakan koordinat lookup tool online. Format jawaban: nama kota dalam bahasa Inggris (huruf kecil, dua kata dipisah spasi).\n\nIni sebabnya penting untuk hapus metadata sebelum share foto!',
+    solution: 'Koordinat ini menunjuk ke New York City, Amerika Serikat.\n\nMetadata foto bisa mengandung: lokasi GPS, device yang digunakan, waktu pengambilan, bahkan setting kamera. Hati-hati saat share foto!',
     answer: 'new york'
   },
   {
     id: 'pwn-1',
     category: 'pwn',
-    title: 'Buffer Overflow Basics',
-    difficulty: 'Hard',
+    title: 'Buffer Overflow Dasar',
+    difficulty: 'Sulit',
     points: 300,
-    description: 'A program has a buffer of 64 bytes. Input more than 64 characters to overwrite the return address.',
-    hint: 'Understanding stack layout is key. The return address is after the buffer.',
-    solution: 'Overflow the buffer with controlled data. Flag: "CTF{stack_overflow_basics}"',
+    description: 'Program punya buffer 64 bytes. Input lebih dari 64 karakter untuk overwrite return address!\n\nBuffer overflow adalah bug klasik yang masih sering ditemukan. Sangat berbahaya!',
+    hint: 'Pahami stack layout! Return address ada setelah buffer. Dengan overflow, kita bisa overwrite return address dan hijack program flow.\n\nDalam CTF, biasanya ada fungsi "win()" yang harus kita panggil.',
+    solution: 'Overflow buffer dengan data terkontrol untuk overwrite return address. Flag: "CTF{stack_overflow_basics}"\n\nBuffer overflow adalah kerentanan yang memungkinkan arbitrary code execution - sangat berbahaya! Selalu validasi input size.',
     answer: 'CTF{stack_overflow_basics}'
   },
   {
     id: 'pwn-2',
     category: 'pwn',
-    title: 'Format String',
-    difficulty: 'Hard',
+    title: 'Format String Attack',
+    difficulty: 'Sulit',
     points: 300,
-    description: 'A program uses printf(user_input) directly. Exploit it to read memory.',
-    hint: 'Use format specifiers like %x or %s to read stack values.',
-    solution: 'Use %x repeatedly to leak stack values. Flag: "CTF{format_strings_leak}"',
+    description: 'Program menggunakan printf(user_input) langsung. Eksploitasi untuk baca memori!\n\nIni bug berbahaya yang memungkinkan baca/tulis arbitrary memory.',
+    hint: 'Gunakan format specifier seperti %x untuk leak stack values, atau %s untuk baca string dari memori. Coba input: %x %x %x %x\n\nFormat string bug memungkinkan membaca dan menulis memori!',
+    solution: 'Gunakan %x berulang kali untuk leak nilai stack. Flag: "CTF{format_strings_leak}"\n\nNikmat sekali bug ini! Bisa baca memori, overwrite variabel, bahkan get shell. Lesson: JANGAN pernah pakai user input langsung di printf!',
     answer: 'CTF{format_strings_leak}'
   },
   {
     id: 'reversing-1',
     category: 'reverse-engineering',
-    title: 'Simple XOR',
-    difficulty: 'Medium',
+    title: 'XOR Sederhana',
+    difficulty: 'Sedang',
     points: 200,
-    description: 'A program XORs input with key 0x42. Encrypted flag: "0x05 0x32 0x07 0x66"',
-    hint: 'XOR is reversible. XOR the encrypted bytes with 0x42.',
-    solution: 'XOR each byte: 0x05^0x42=G, 0x32^0x42=p, 0x07^0x42=E, 0x66^0x42=$. Flag format varies.',
+    description: 'Program meng-XOR input dengan key 0x42. Flag terenkripsi: "0x05 0x32 0x07 0x66"\n\nXOR adalah operasi favorit dalam kriptografi karena reversible!',
+    hint: 'XOR itu reversible: A XOR B = C, maka C XOR B = A\n\nXOR setiap byte dengan 0x42. Atau gunakan CyberChef dengan recipe "XOR" key=0x42.\n\nContoh: 0x05 XOR 0x42 = 0x47 (karakter G)',
+    solution: 'XOR setiap byte: 0x05^0x42=0x47(G), 0x32^0x42=0x70(p), ...\n\nFlag: "CTF{xor_is_reversible}"\n\nXOR sering dipakai untuk enkripsi sederhana. Kelemahan: kalau key-nya pendek dan berulang, mudah dipecahkan dengan frequency analysis!',
     answer: 'CTF{xor_is_reversible}'
   },
   {
     id: 'reversing-2',
     category: 'reverse-engineering',
-    title: 'String Analysis',
-    difficulty: 'Easy',
+    title: 'Analisis String',
+    difficulty: 'Mudah',
     points: 100,
-    description: 'Run strings command on a binary. One string looks suspicious: "CTF{strings_command_works}"',
-    hint: 'Use the strings command on Linux or Strings.exe on Windows.',
-    solution: 'The flag is plainly visible in the binary strings.',
+    description: 'Jalankan command strings pada binary. Salah satu string terlihat mencurigakan: "CTF{strings_command_works}"\n\nBanyak binary menyimpan string dalam plaintext!',
+    hint: 'Command strings (Linux/Mac) atau Strings.exe (Windows) menampilkan semua string readable dalam binary.\n\nUsage: strings nama_file | grep CTF\n\nIni teknik paling sederhana dalam reverse engineering!',
+    solution: 'Flag terlihat jelas di output strings: "CTF{strings_command_works}"\n\nWalaupun kode sudah dikompilasi, string biasanya tetap readable. Makanya attacker selalu cek strings dulu sebelum reverse engineering lebih lanjut!',
     answer: 'CTF{strings_command_works}'
   }
 ];
 
 export const resources = [
   {
-    category: 'General CTF',
+    category: 'Platform CTF & Belajar',
     links: [
-      { title: 'CTFtime', url: 'https://ctftime.org', description: 'Archive of past and upcoming CTF competitions' },
-      { title: 'PicoCTF', url: 'https://picoctf.org', description: 'Beginner-friendly CTF platform' },
-      { title: 'HackTheBox', url: 'https://hackthebox.com', description: 'Penetration testing labs and challenges' },
-      { title: 'TryHackMe', url: 'https://tryhackme.com', description: 'Learn cybersecurity through hands-on exercises' }
+      { title: 'CTFtime', url: 'https://ctftime.org', description: 'Arsip kompetisi CTF masa lalu dan mendatang. Cek jadwal, scoreboard, dan write-ups!' },
+      { title: 'PicoCTF', url: 'https://picoctf.org', description: 'Platform CTF ramah pemula dengan tutorial lengkap. Cocok untuk belajar dari nol!' },
+      { title: 'HackTheBox', url: 'https://hackthebox.com', description: 'Lab penetration testing dengan mesin virtual nyata. Dari level mudah sampai extreme!' },
+      { title: 'TryHackMe', url: 'https://tryhackme.com', description: 'Belajar cybersecurity melalui hands-on room. Guided learning path tersedia!' }
     ]
   },
   {
-    category: 'Cryptography',
+    category: 'Kriptografi',
     links: [
-      { title: 'CyberChef', url: 'https://gchq.github.io/CyberChef/', description: 'Web app for encryption, encoding, compression' },
-      { title: 'dCode', url: 'https://www.dcode.fr/en', description: 'Cipher identifier and solver' },
-      { title: 'CrackStation', url: 'https://crackstation.net/', description: 'Free password hash cracker' }
+      { title: 'CyberChef', url: 'https://gchq.github.io/CyberChef/', description: 'Swiss army knife untuk encoding, encryption, dan kompresi. Sangat powerful!' },
+      { title: 'dCode', url: 'https://www.dcode.fr/en', description: 'Identifier dan solver untuk berbagai cipher klasik dan modern' },
+      { title: 'CrackStation', url: 'https://crackstation.net/', description: 'Crack password hash gratis dengan database 15 milyar hash!' }
     ]
   },
   {
-    category: 'Forensics',
+    category: 'Forensik Digital',
     links: [
-      { title: 'Autopsy', url: 'https://www.autopsy.com/', description: 'Digital forensics platform' },
-      { title: 'Wireshark', url: 'https://www.wireshark.org/', description: 'Network protocol analyzer' },
-      { title: 'Volatility', url: 'https://www.volatilityfoundation.org/', description: 'Memory forensics framework' }
+      { title: 'Autopsy', url: 'https://www.autopsy.com/', description: 'Platform forensik digital open source untuk analisis disk dan mobile' },
+      { title: 'Wireshark', url: 'https://www.wireshark.org/', description: 'Network protocol analyzer - wajib untuk analisis traffic jaringan!' },
+      { title: 'Volatility', url: 'https://www.volatilityfoundation.org/', description: 'Framework forensik memory untuk analisis RAM dump' }
     ]
   },
   {
-    category: 'Web Exploitation',
+    category: 'Eksploitasi Web',
     links: [
-      { title: 'OWASP Top 10', url: 'https://owasp.org/www-project-top-ten/', description: 'Most critical web application security risks' },
-      { title: 'PortSwigger Academy', url: 'https://portswigger.net/web-security', description: 'Free web security training' },
-      { title: 'Burp Suite', url: 'https://portswigger.net/burp', description: 'Web vulnerability scanner' }
+      { title: 'OWASP Top 10', url: 'https://owasp.org/www-project-top-ten/', description: '10 risiko keamanan web paling kritis. Must read untuk web developer!' },
+      { title: 'PortSwigger Academy', url: 'https://portswigger.net/web-security', description: 'Training web security gratis dengan lab interaktif. Dari basic sampai advanced!' },
+      { title: 'Burp Suite', url: 'https://portswigger.net/burp', description: 'Tools standar industri untuk web vulnerability scanning dan testing' }
     ]
   },
   {
-    category: 'Binary Exploitation',
+    category: 'Binary Exploitation (PWN)',
     links: [
-      { title: 'pwn.college', url: 'https://pwn.college/', description: 'Education platform for binary exploitation' },
-      { title: 'Nightmare', url: 'https://guyinatuxedo.github.io/', description: 'Binary exploitation course' },
-      { title: 'ROPEmporium', url: 'https://ropemporium.com/', description: 'Learn return-oriented programming' }
+      { title: 'pwn.college', url: 'https://pwn.college/', description: 'Platform edukasi binary exploitation dari Arizona State University' },
+      { title: 'Nightmare', url: 'https://guyinatuxedo.github.io/', description: 'Course binary exploitation lengkap dengan praktik' },
+      { title: 'ROPEmporium', url: 'https://ropemporium.com/', description: 'Belajar Return Oriented Programming step-by-step' }
     ]
   },
   {
     category: 'OSINT',
     links: [
-      { title: 'Bellingcat', url: 'https://www.bellingcat.com/', description: 'OSINT investigation tutorials' },
-      { title: 'OSINT Framework', url: 'https://osintframework.com/', description: 'Collection of OSINT tools' },
-      { title: 'IntelTechniques', url: 'https://inteltechniques.com/', description: 'OSINT training and tools' }
+      { title: 'Bellingcat', url: 'https://www.bellingcat.com/', description: 'Tutorial investigasi OSINT dari jurnalis investigatif terkenal' },
+      { title: 'OSINT Framework', url: 'https://osintframework.com/', description: 'Koleksi tools OSINT terorganisir berdasarkan kategori' },
+      { title: 'IntelTechniques', url: 'https://inteltechniques.com/', description: 'Training dan tools OSINT dari Michael Bazzell' }
     ]
   },
   {
     category: 'Reverse Engineering',
     links: [
-      { title: 'Ghidra', url: 'https://ghidra-sre.org/', description: 'Free software reverse engineering tool' },
-      { title: 'Radare2', url: 'https://rada.re/', description: 'Open source reverse engineering framework' },
-      { title: 'Malware Analysis', url: 'https://www.malware-traffic-analysis.net/', description: 'Malware traffic analysis exercises' }
+      { title: 'Ghidra', url: 'https://ghidra-sre.org/', description: 'Software reverse engineering gratis dari NSA. Powerful dan open source!' },
+      { title: 'Radare2', url: 'https://rada.re/', description: 'Framework reverse engineering open source dengan fitur lengkap' },
+      { title: 'Malware Analysis', url: 'https://www.malware-traffic-analysis.net/', description: 'Latihan analisis malware dengan PCAP dan sample nyata' }
     ]
   }
 ];
