@@ -41,21 +41,21 @@ export const categories = [
   },
   {
     id: 'web-exploitation',
-    name: 'Web Exploitation',
+    name: 'Eksploitasi Web',
     slug: 'web-exploitation',
     icon: 'globe',
-    description: 'Exploiting vulnerabilities in web applications and services.',
+    description: 'Menemukan dan mengeksploitasi celah keamanan pada aplikasi web dan layanan online.',
     color: '#10b981',
-    history: 'Web exploitation emerged with the World Wide Web in the 1990s. Early attacks included simple SQL injection and cross-site scripting. As web applications became more complex, attack vectors expanded to include authentication bypass, CSRF, XXE, and sophisticated business logic flaws.',
-    explanation: 'Web exploitation involves finding and exploiting vulnerabilities in web applications. Common vulnerabilities include SQL injection, XSS, CSRF, authentication flaws, and insecure configurations. Understanding HTTP protocol, web technologies, and secure coding practices is essential.',
+    history: 'Eksploitasi web mulai muncul bersamaan dengan perkembangan World Wide Web di tahun 1990-an. Serangan awal mencakup SQL injection sederhana dan cross-site scripting (XSS). Seiring aplikasi web menjadi lebih kompleks, vektor serangan berkembang mencakup authentication bypass, CSRF, XXE, dan kelemahan logika bisnis yang canggih. Hari ini, hampir semua layanan online rentan terhadap serangan web jika tidak diamankan dengan baik.',
+    explanation: 'Eksploitasi web adalah seni menemukan celah keamanan pada website atau aplikasi web. Bayangkan kamu mencari pintu belakang yang tidak terkunci pada sebuah bangunan digital!\\n\\nYang akan kamu pelajari:\\n\u2022 SQL Injection: Memasukkan perintah database lewat form input\\n\u2022 Cross-Site Scripting (XSS): Menyisipkan kode JavaScript berbahaya\\n\u2022 CSRF: Membuat pengguna melakukan aksi tanpa disadari\\n\u2022 Authentication Bypass: Melewati sistem login\\n\u2022 File Upload Vulnerabilities: Mengupload file berbahaya\\n\u2022 Path Traversal: Mengakses file yang seharusnya tidak bisa diakses\\n\u2022 API Security: Keamanan pada REST API\\n\\nContoh sederhana: Pada form login yang tidak aman, input \\' OR \\'1\\'=\\'1 bisa bypass password! Kamu akan belajar bagaimana hacker berpikir dan bagaimana melindungi aplikasi.\\n\\nSkill ini sangat berguna untuk menjadi web developer atau security analyst!',
     caseStudies: [
       {
-        title: 'Sony Pictures Hack',
-        description: 'Attackers exploited web vulnerabilities to gain initial access, leading to massive data breach in 2014.'
+        title: 'Peretasan Sony Pictures (2014)',
+        description: 'Penyerang mengeksploitasi kerentanan web untuk mendapatkan akses awal, yang mengakibatkan kebocoran data masif. Email internal, film yang belum dirilis, dan data karyawan tersebar ke publik. Kerugian diperkirakan mencapai $100 juta. Kasus ini menunjukkan betapa pentingnya keamanan layer aplikasi web.'
       },
       {
-        title: 'Equifax Breach',
-        description: 'A known vulnerability in Apache Struts framework led to exposure of 147 million people\'s data.'
+        title: 'Kebocoran Data Equifax (2017)',
+        description: 'Celah keamanan yang sudah diketahui pada framework Apache Struts menyebabkan data 147 juta orang bocor, termasuk nomor jaminan sosial, tanggal lahir, dan alamat. Ini adalah salah satu kebocoran data terbesar dalam sejarah. Yang lebih mengkhawatirkan, patch untuk celah ini sudah tersedia berbulan-bulan sebelumnya tapi tidak diaplikasikan!'
       }
     ]
   },
