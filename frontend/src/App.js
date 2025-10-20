@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Categories from './pages/Categories';
-import CategoryDetail from './pages/CategoryDetail';
-import Challenges from './pages/Challenges';
-import ChallengeDetail from './pages/ChallengeDetail';
-import Resources from './pages/Resources';
+import Layout from './components/Layout.jsx';
+import Home from './pages/Home.jsx';
+import Categories from './pages/Categories.jsx';
+import CategoryDetail from './pages/CategoryDetail.jsx';
+import Challenges from './pages/Challenges.jsx';
+import ChallengeDetail from './pages/ChallengeDetail.jsx';
+import Resources from './pages/Resources.jsx';
 import './App.css';
 
 function App() {
