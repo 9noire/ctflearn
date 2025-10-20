@@ -23,11 +23,11 @@ const Categories = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            CTF Categories
+            Kategori CTF
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Each category represents a unique domain in cybersecurity. 
-            Explore their history, learn key concepts, study real-world cases, and solve challenges.
+            Setiap kategori merepresentasikan domain unik dalam keamanan siber. 
+            Jelajahi sejarahnya, pelajari konsep kunci, pelajari kasus nyata, dan selesaikan tantangan.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const Categories = () => {
                     {/* Meta Info */}
                     <div className="flex flex-wrap gap-3 mb-6">
                       <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-sm">
-                        {challengeCount} Challenges
+                        {challengeCount} Tantangan
                       </span>
                       <span
                         className="inline-flex items-center px-3 py-1 rounded-lg text-sm font-medium"
@@ -72,7 +72,7 @@ const Categories = () => {
                           color: category.color
                         }}
                       >
-                        Interactive
+                        Interaktif
                       </span>
                     </div>
 
@@ -83,7 +83,7 @@ const Categories = () => {
                           variant="outline"
                           className="border-slate-300 hover:bg-slate-50"
                         >
-                          Learn More
+                          Pelajari Lebih Lanjut
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
@@ -92,7 +92,7 @@ const Categories = () => {
                           className="text-white shadow-md"
                           style={{ backgroundColor: category.color }}
                         >
-                          Try Challenges
+                          Coba Tantangan
                         </Button>
                       </Link>
                     </div>

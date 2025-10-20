@@ -13,9 +13,9 @@ const CategoryDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-slate-900 mb-4">Category not found</h1>
+          <h1 className="text-2xl font-bold text-slate-900 mb-4">Kategori tidak ditemukan</h1>
           <Link to="/categories">
-            <Button>Back to Categories</Button>
+            <Button>Kembali ke Kategori</Button>
           </Link>
         </div>
       </div>
@@ -28,7 +28,7 @@ const CategoryDetail = () => {
         {/* Back Button */}
         <Link to="/categories" className="inline-flex items-center text-slate-600 hover:text-slate-900 mb-8 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Categories
+          Kembali ke Kategori
         </Link>
 
         {/* Header */}
@@ -53,10 +53,10 @@ const CategoryDetail = () => {
             <div className="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center">
               <History className="h-5 w-5 text-cyan-600" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-900">History</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Sejarah</h2>
           </div>
           <Card className="p-6 bg-white border-slate-200">
-            <p className="text-slate-700 leading-relaxed">{category.history}</p>
+            <p className="text-slate-700 leading-relaxed whitespace-pre-line">{category.history}</p>
           </Card>
         </section>
 
@@ -66,10 +66,10 @@ const CategoryDetail = () => {
             <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
               <BookOpen className="h-5 w-5 text-blue-600" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-900">What You'll Learn</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Apa yang Akan Kamu Pelajari</h2>
           </div>
           <Card className="p-6 bg-white border-slate-200">
-            <p className="text-slate-700 leading-relaxed">{category.explanation}</p>
+            <p className="text-slate-700 leading-relaxed whitespace-pre-line">{category.explanation}</p>
           </Card>
         </section>
 
@@ -79,7 +79,7 @@ const CategoryDetail = () => {
             <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
               <FileText className="h-5 w-5 text-purple-600" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-900">Real-World Case Studies</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Studi Kasus Dunia Nyata</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {category.caseStudies.map((study, index) => (
@@ -97,11 +97,11 @@ const CategoryDetail = () => {
             <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
               <Trophy className="h-5 w-5 text-green-600" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-900">Practice Challenges</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Tantangan Praktik</h2>
           </div>
           <Card className="p-6 bg-gradient-to-br from-slate-50 to-white border-slate-200">
             <p className="text-slate-700 mb-6">
-              Ready to test your skills? We have {categoryChallenges.length} challenges available in this category.
+              Siap menguji kemampuanmu? Kami punya {categoryChallenges.length} tantangan tersedia di kategori ini.
             </p>
             <Link to={`/challenges/${category.id}`}>
               <Button
@@ -109,7 +109,7 @@ const CategoryDetail = () => {
                 style={{ backgroundColor: category.color }}
                 size="lg"
               >
-                Start Challenges
+                Mulai Tantangan
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
