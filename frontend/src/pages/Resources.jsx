@@ -13,10 +13,10 @@ const Resources = () => {
             <BookOpen className="h-8 w-8 text-cyan-600" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Learning Resources
+            Sumber Belajar
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Curated collection of tools, platforms, and learning materials to enhance your cybersecurity skills
+            Koleksi pilihan tools, platform, dan materi pembelajaran untuk meningkatkan skill cybersecurity-mu. Semua dalam Bahasa Inggris, tapi jangan khawatir - kamu pasti bisa!
           </p>
         </div>
 
@@ -54,19 +54,35 @@ const Resources = () => {
           ))}
         </div>
 
+        {/* Tips Section */}
+        <div className="mt-16">
+          <Card className="p-8 bg-gradient-to-br from-blue-50 to-cyan-50 border-cyan-200">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              💡 Tips Belajar Cybersecurity
+            </h2>
+            <ul className="space-y-3 text-slate-700 text-lg">
+              <li>• <strong>Mulai dari dasar:</strong> Jangan langsung loncat ke topik advanced. Bangun fondasi yang kuat dulu!</li>
+              <li>• <strong>Praktik, praktik, praktik:</strong> Teori penting, tapi hands-on experience lebih penting lagi.</li>
+              <li>• <strong>Jangan takut gagal:</strong> Setiap error adalah pelajaran. Pro hacker juga dulu pemula!</li>
+              <li>• <strong>Join komunitas:</strong> Bergabung dengan forum, Discord, atau grup lokal. Belajar bareng lebih seru!</li>
+              <li>• <strong>Dokumentasikan perjalananmu:</strong> Write-up setiap challenge yang kamu selesaikan. Ini portfolio-mu!</li>
+            </ul>
+          </Card>
+        </div>
+
         {/* CTA Section */}
         <div className="mt-16">
           <Card className="p-8 bg-gradient-to-br from-cyan-50 to-blue-50 border-cyan-200">
             <div className="text-center">
               <h2 className="text-2xl font-bold text-slate-900 mb-3">
-                Ready to Practice?
+                Siap Praktik?
               </h2>
               <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                Put your knowledge to the test with our interactive CTF challenges
+                Uji pengetahuanmu dengan tantangan CTF interaktif kami
               </p>
               <Link to="/categories">
                 <button className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg shadow-lg shadow-cyan-600/30 transition-colors">
-                  Explore Challenges
+                  Jelajahi Tantangan
                 </button>
               </Link>
             </div>

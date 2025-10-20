@@ -30,11 +30,11 @@ const Challenges = () => {
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty.toLowerCase()) {
-      case 'easy':
+      case 'mudah':
         return 'bg-green-100 text-green-700 border-green-200';
-      case 'medium':
+      case 'sedang':
         return 'bg-yellow-100 text-yellow-700 border-yellow-200';
-      case 'hard':
+      case 'sulit':
         return 'bg-red-100 text-red-700 border-red-200';
       default:
         return 'bg-slate-100 text-slate-700 border-slate-200';
@@ -45,9 +45,9 @@ const Challenges = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-slate-900 mb-4">Category not found</h1>
+          <h1 className="text-2xl font-bold text-slate-900 mb-4">Kategori tidak ditemukan</h1>
           <Link to="/categories">
-            <Button>Back to Categories</Button>
+            <Button>Kembali ke Kategori</Button>
           </Link>
         </div>
       </div>
@@ -63,16 +63,16 @@ const Challenges = () => {
           className="inline-flex items-center text-slate-600 hover:text-slate-900 mb-8 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to {currentCategory.name}
+          Kembali ke {currentCategory.name}
         </Link>
 
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            {currentCategory.name} Challenges
+            Tantangan {currentCategory.name}
           </h1>
           <p className="text-lg text-slate-600 mb-6">
-            Test your skills with these hands-on challenges
+            Uji kemampuanmu dengan tantangan hands-on ini
           </p>
 
           {/* Stats */}
@@ -82,7 +82,7 @@ const Challenges = () => {
                 <Trophy className="h-5 w-5 text-yellow-500" />
                 <div>
                   <p className="text-2xl font-bold text-slate-900">{totalPoints}</p>
-                  <p className="text-sm text-slate-600">Total Points</p>
+                  <p className="text-sm text-slate-600">Total Poin</p>
                 </div>
               </div>
             </Card>
@@ -93,7 +93,7 @@ const Challenges = () => {
                   <p className="text-2xl font-bold text-slate-900">
                     {completedChallenges.filter(id => challenges.find(c => c.id === id && c.category === category)).length}/{categoryChallenges.length}
                   </p>
-                  <p className="text-sm text-slate-600">Completed</p>
+                  <p className="text-sm text-slate-600">Diselesaikan</p>
                 </div>
               </div>
             </Card>
@@ -120,11 +120,11 @@ const Challenges = () => {
                       {challenge.difficulty}
                     </Badge>
                     <Badge className="bg-slate-100 text-slate-700 border-slate-200">
-                      {challenge.points} pts
+                      {challenge.points} poin
                     </Badge>
                     {isCompleted(challenge.id) && (
                       <Badge className="bg-green-100 text-green-700 border-green-200">
-                        ✓ Completed
+                        ✓ Selesai
                       </Badge>
                     )}
                   </div>
@@ -132,8 +132,8 @@ const Challenges = () => {
               </div>
 
               {/* Challenge Description */}
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                {challenge.description}
+              <p className="text-slate-600 mb-6 leading-relaxed line-clamp-3">
+                {challenge.description.split('\n')[0]}
               </p>
 
               {/* Action Button */}
@@ -142,7 +142,7 @@ const Challenges = () => {
                   className="w-full text-white shadow-md"
                   style={{ backgroundColor: currentCategory.color }}
                 >
-                  {isCompleted(challenge.id) ? 'Review Solution' : 'Solve Challenge'}
+                  {isCompleted(challenge.id) ? 'Lihat Solusi' : 'Selesaikan Tantangan'}
                 </Button>
               </Link>
             </Card>

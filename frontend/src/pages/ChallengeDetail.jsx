@@ -36,8 +36,8 @@ const ChallengeDetail = () => {
 
     if (normalizedAnswer === normalizedCorrect) {
       // Correct answer!
-      toast.success('Correct! Challenge completed!', {
-        description: `You earned ${challenge.points} points!`
+      toast.success('Benar! Tantangan selesai!', {
+        description: `Kamu mendapat ${challenge.points} poin!`
       });
 
       // Save to localStorage
@@ -52,19 +52,19 @@ const ChallengeDetail = () => {
       setShowSolution(true);
     } else {
       // Incorrect answer
-      toast.error('Incorrect answer', {
-        description: 'Try again or use a hint!'
+      toast.error('Jawaban salah', {
+        description: 'Coba lagi atau gunakan petunjuk!'
       });
     }
   };
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty.toLowerCase()) {
-      case 'easy':
+      case 'mudah':
         return 'bg-green-100 text-green-700 border-green-200';
-      case 'medium':
+      case 'sedang':
         return 'bg-yellow-100 text-yellow-700 border-yellow-200';
-      case 'hard':
+      case 'sulit':
         return 'bg-red-100 text-red-700 border-red-200';
       default:
         return 'bg-slate-100 text-slate-700 border-slate-200';
@@ -75,9 +75,9 @@ const ChallengeDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-slate-900 mb-4">Challenge not found</h1>
+          <h1 className="text-2xl font-bold text-slate-900 mb-4">Tantangan tidak ditemukan</h1>
           <Link to="/categories">
-            <Button>Back to Categories</Button>
+            <Button>Kembali ke Kategori</Button>
           </Link>
         </div>
       </div>
@@ -93,7 +93,7 @@ const ChallengeDetail = () => {
           className="inline-flex items-center text-slate-600 hover:text-slate-900 mb-8 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Challenges
+          Kembali ke Tantangan
         </Link>
 
         {/* Challenge Header */}
@@ -103,7 +103,7 @@ const ChallengeDetail = () => {
               {challenge.difficulty}
             </Badge>
             <Badge className="bg-slate-100 text-slate-700 border-slate-200">
-              {challenge.points} points
+              {challenge.points} poin
             </Badge>
             <Badge
               className="border"
@@ -118,7 +118,7 @@ const ChallengeDetail = () => {
             {isCompleted && (
               <Badge className="bg-green-100 text-green-700 border-green-200">
                 <CheckCircle className="h-3 w-3 mr-1" />
-                Completed
+                Selesai
               </Badge>
             )}
           </div>
@@ -127,14 +127,14 @@ const ChallengeDetail = () => {
           </h1>
           {attempts > 0 && (
             <p className="text-slate-600">
-              Attempts: {attempts}
+              Percobaan: {attempts}
             </p>
           )}
         </div>
 
         {/* Challenge Description */}
         <Card className="p-6 bg-white border-slate-200 mb-6">
-          <h2 className="text-lg font-bold text-slate-900 mb-3">Challenge</h2>
+          <h2 className="text-lg font-bold text-slate-900 mb-3">Tantangan</h2>
           <p className="text-slate-700 leading-relaxed whitespace-pre-wrap">
             {challenge.description}
           </p>
@@ -142,12 +142,12 @@ const ChallengeDetail = () => {
 
         {/* Answer Form */}
         <Card className="p-6 bg-white border-slate-200 mb-6">
-          <h2 className="text-lg font-bold text-slate-900 mb-4">Submit Your Answer</h2>
+          <h2 className="text-lg font-bold text-slate-900 mb-4">Kirim Jawabanmu</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <Input
                 type="text"
-                placeholder="Enter your answer..."
+                placeholder="Masukkan jawabanmu..."
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
                 className="text-lg"
@@ -160,7 +160,7 @@ const ChallengeDetail = () => {
               style={{ backgroundColor: category.color }}
               disabled={!answer.trim() || (isCompleted && showSolution)}
             >
-              {isCompleted && showSolution ? 'Challenge Completed' : 'Submit Answer'}
+              {isCompleted && showSolution ? 'Tantangan Selesai' : 'Kirim Jawaban'}
             </Button>
           </form>
         </Card>
@@ -173,7 +173,7 @@ const ChallengeDetail = () => {
           >
             <div className="flex items-center gap-3">
               <HelpCircle className="h-5 w-5 text-cyan-600" />
-              <h2 className="text-lg font-bold text-slate-900">Hint</h2>
+              <h2 className="text-lg font-bold text-slate-900">Petunjuk</h2>
             </div>
             {showHint ? (
               <EyeOff className="h-5 w-5 text-slate-400" />
@@ -183,7 +183,7 @@ const ChallengeDetail = () => {
           </button>
           {showHint && (
             <div className="mt-4 p-4 bg-cyan-50 rounded-lg border border-cyan-200">
-              <p className="text-slate-700 leading-relaxed">{challenge.hint}</p>
+              <p className="text-slate-700 leading-relaxed whitespace-pre-line">{challenge.hint}</p>
             </div>
           )}
         </Card>
@@ -200,7 +200,7 @@ const ChallengeDetail = () => {
               ) : (
                 <XCircle className="h-5 w-5 text-slate-400" />
               )}
-              <h2 className="text-lg font-bold text-slate-900">Solution</h2>
+              <h2 className="text-lg font-bold text-slate-900">Solusi</h2>
             </div>
             {showSolution ? (
               <EyeOff className="h-5 w-5 text-slate-400" />
@@ -222,7 +222,7 @@ const ChallengeDetail = () => {
           <Link to={`/challenges/${category.id}`}>
             <Button variant="outline" className="border-slate-300 hover:bg-slate-50">
               <ArrowLeft className="h-4 w-4 mr-2" />
-              All {category.name} Challenges
+              Semua Tantangan {category.name}
             </Button>
           </Link>
         </div>
