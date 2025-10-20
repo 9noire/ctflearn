@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
               </span>
             </div>
             <div className="text-slate-500 text-sm">
-              Dibuat dengan React + Vite + Tailwind CSS
+              Created with 🤍 by <strong>Rakha</strong>
             </div>
           </div>
         </div>
