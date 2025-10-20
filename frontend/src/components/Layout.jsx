@@ -88,11 +88,11 @@ const Layout = ({ children }) => {
             <div className="flex items-center gap-2">
               <Flag className="h-6 w-6 text-cyan-600" />
               <span className="text-slate-600 text-sm">
-                © 2025 CTF Academy. Educational purposes only.
+                © 2025 CTF Learn. Untuk tujuan edukasi.
               </span>
             </div>
             <div className="text-slate-500 text-sm">
-              Built with React + Vite + Tailwind CSS
+              Dibuat dengan React + Vite + Tailwind CSS
             </div>
           </div>
         </div>
