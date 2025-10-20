@@ -1,41 +1,41 @@
 export const categories = [
   {
     id: 'forensic',
-    name: 'Forensic',
+    name: 'Forensik Digital',
     slug: 'forensic',
     icon: 'search',
-    description: 'Digital forensics involves analyzing digital artifacts to uncover evidence of cybercrimes.',
+    description: 'Forensik digital adalah ilmu menganalisis bukti digital untuk mengungkap kejahatan siber.',
     color: '#06b6d4',
-    history: 'Digital forensics emerged in the 1980s when personal computers became widespread. The first computer crime cases required investigators to develop new methods for collecting and analyzing digital evidence. Today, it\'s a crucial field in cybersecurity and law enforcement.',
-    explanation: 'Forensic challenges involve examining files, memory dumps, network traffic, and other digital artifacts to find hidden information or reconstruct events. Analysts use specialized tools to recover deleted files, analyze file systems, examine metadata, and identify malicious activities.',
+    history: 'Forensik digital mulai berkembang pada tahun 1980-an ketika komputer pribadi menjadi populer. Kasus kejahatan komputer pertama membutuhkan penyelidik untuk mengembangkan metode baru dalam mengumpulkan dan menganalisis bukti digital. Seiring berkembangnya teknologi, forensik digital menjadi semakin penting dalam dunia keamanan siber dan penegakan hukum. Kini, forensik digital tidak hanya digunakan untuk menangkap penjahat siber, tetapi juga untuk melindungi organisasi dari ancaman keamanan.',
+    explanation: 'Forensik digital adalah proses investigasi untuk menemukan, menganalisis, dan menyimpan bukti yang tersimpan dalam perangkat digital seperti komputer, smartphone, atau server. Bayangkan seperti detektif yang mencari petunjuk, tapi petunjuknya ada di dalam file komputer!\n\nDalam tantangan forensik, kamu akan:\n• Memeriksa file yang rusak atau tersembunyi\n• Menganalisis memory dump (jejak memori komputer)\n• Melihat traffic jaringan untuk menemukan aktivitas mencurigakan\n• Memulihkan file yang sudah dihapus\n• Menganalisis metadata (informasi tersembunyi dalam file)\n• Mengidentifikasi malware atau software jahat\n\nTools yang sering digunakan: Autopsy, Wireshark, Volatility, FTK Imager, dan banyak lagi. Jangan khawatir, kamu akan belajar menggunakannya secara bertahap!',
     caseStudies: [
       {
-        title: 'The BTK Killer Case',
-        description: 'Dennis Rader was caught after digital forensics traced a floppy disk metadata to a church computer he used.'
+        title: 'Kasus BTK Killer (2005)',
+        description: 'Dennis Rader, pembunuh berantai yang aktif selama 30 tahun, akhirnya tertangkap berkat forensik digital. Polisi menemukan metadata dari floppy disk yang dikirim Rader, yang menunjukkan file tersebut dibuat di komputer gereja tempat ia bekerja. Ini membuktikan betapa pentingnya metadata dalam investigasi digital!'
       },
       {
-        title: 'Silk Road Investigation',
-        description: 'FBI used digital forensics to trace Bitcoin transactions and server logs to identify Ross Ulbricht.'
+        title: 'Investigasi Silk Road (2013)',
+        description: 'FBI menggunakan teknik forensik digital untuk melacak transaksi Bitcoin dan menganalisis log server. Mereka berhasil mengidentifikasi Ross Ulbricht sebagai operator pasar gelap online terbesar di dunia. Kasus ini menunjukkan bahwa jejak digital sangat sulit dihilangkan sepenuhnya.'
       }
     ]
   },
   {
     id: 'cryptography',
-    name: 'Cryptography',
+    name: 'Kriptografi',
     slug: 'cryptography',
     icon: 'lock',
-    description: 'The art and science of encoding and decoding secret messages.',
+    description: 'Seni dan ilmu menyandikan serta memecahkan pesan rahasia untuk melindungi informasi.',
     color: '#8b5cf6',
-    history: 'Cryptography dates back to ancient civilizations. Julius Caesar used the Caesar cipher in 100 BC. During WWII, the Enigma machine was broken by Alan Turing. Modern cryptography began in the 1970s with public-key cryptography and has evolved with quantum computing challenges.',
-    explanation: 'Cryptography challenges involve breaking ciphers, analyzing encryption algorithms, exploiting weak implementations, and understanding mathematical concepts behind secure communication. Common techniques include frequency analysis, known-plaintext attacks, and exploiting implementation flaws.',
+    history: 'Kriptografi sudah ada sejak zaman kuno! Julius Caesar menggunakan Caesar cipher pada tahun 100 SM untuk mengirim pesan rahasia kepada pasukannya. Selama Perang Dunia II, mesin Enigma Nazi dipecahkan oleh Alan Turing dan timnya, yang sangat membantu kemenangan Sekutu. Kriptografi modern dimulai pada tahun 1970-an dengan ditemukannya public-key cryptography (kriptografi kunci publik). Saat ini, dengan munculnya quantum computing, para ahli sedang mengembangkan kriptografi yang lebih kuat lagi.',
+    explanation: 'Kriptografi adalah ilmu membuat dan memecahkan kode rahasia. Bayangkan kamu punya pesan rahasia yang hanya bisa dibaca oleh orang tertentu - itulah inti dari kriptografi!\n\nApa yang akan kamu pelajari:\n• Cipher klasik: Caesar cipher, substitusi, transposisi\n• Encoding: Base64, Hexadecimal, ASCII\n• Enkripsi modern: AES, RSA\n• Hashing: MD5, SHA-256\n• Frequency analysis untuk memecahkan cipher\n• XOR operations\n\nContoh sederhana: Jika kamu menggeser setiap huruf 3 posisi (A→D, B→E, C→F), "HALO" menjadi "KDOR". Ini adalah Caesar cipher!\n\nTantangan kriptografi akan melatih kemampuan berpikir logis dan memecahkan puzzle. Sangat menyenangkan!',
     caseStudies: [
       {
-        title: 'Enigma Machine',
-        description: 'Allied forces broke Nazi Germany\'s Enigma encryption, significantly contributing to WWII victory.'
+        title: 'Mesin Enigma Perang Dunia II',
+        description: 'Mesin Enigma adalah alat enkripsi canggih yang digunakan Nazi Jerman. Diperlukan tim matematikawan brilian termasuk Alan Turing untuk memecahkannya. Keberhasilan mereka mempercepat akhir Perang Dunia II dan menyelamatkan jutaan nyawa. Ini membuktikan betapa pentingnya kriptografi dalam sejarah!'
       },
       {
-        title: 'RSA-129 Challenge',
-        description: 'A 129-digit number was factored in 1994, demonstrating the importance of key size in cryptography.'
+        title: 'Tantangan RSA-129 (1994)',
+        description: 'Pada tahun 1977, para peneliti MIT menantang dunia untuk memecahkan enkripsi RSA dengan kunci 129 digit. Mereka memperkirakan butuh 40 kuadriliun tahun! Tapi pada 1994, hanya dalam 17 tahun, angka tersebut berhasil dipecahkan dengan kerjasama komputer di seluruh dunia. Ini mengajarkan pentingnya menggunakan kunci enkripsi yang cukup panjang.'
       }
     ]
   },
