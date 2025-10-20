@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
                 <Flag className="h-8 w-8 text-cyan-600 group-hover:text-cyan-700 transition-colors" />
                 <div className="absolute inset-0 bg-cyan-400/20 blur-xl group-hover:bg-cyan-400/30 transition-all" />
               </div>
-              <span className="text-xl font-bold text-slate-900">CTF Academy</span>
+              <span className="text-xl font-bold text-slate-900">CTF Learn</span>
             </Link>
 
             {/* Desktop Navigation */}
