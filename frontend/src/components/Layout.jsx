@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/categories', label: 'Categories' },
-    { path: '/resources', label: 'Resources' }
+    { path: '/', label: 'Beranda' },
+    { path: '/categories', label: 'Kategori' },
+    { path: '/resources', label: 'Sumber Belajar' }
   ];
 
   const isActive = (path) => location.pathname === path;
